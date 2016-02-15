@@ -9,5 +9,11 @@
 import Foundation
 import Vapor
 
-print("Integration Succesful!")
+print("SwiftServerIO -- starting")
 
+Route.get("hello") { _ in
+    return ["Hello" : "World"]
+}
+
+let server = Server()
+server.run(port: 8080)
