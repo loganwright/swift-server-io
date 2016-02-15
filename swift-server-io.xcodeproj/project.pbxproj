@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80E4D8891C717FF30084353F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4D8881C717FF30084353F /* main.swift */; };
+		80E4D8901C71813E0084353F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4D88F1C71813E0084353F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		80E4D8851C717FF30084353F /* swift-server-io */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-server-io"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80E4D8881C717FF30084353F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		80E4D88F1C71813E0084353F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		80E4D8871C717FF30084353F /* swift-server-io */ = {
 			isa = PBXGroup;
 			children = (
-				80E4D8881C717FF30084353F /* main.swift */,
+				80E4D88F1C71813E0084353F /* main.swift */,
 			);
 			path = "swift-server-io";
 			sourceTree = "<group>";
@@ -119,7 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80E4D8891C717FF30084353F /* main.swift in Sources */,
+				80E4D8901C71813E0084353F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,13 +209,18 @@
 		80E4D88D1C717FF30084353F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		80E4D88E1C717FF30084353F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
